@@ -1,0 +1,67 @@
+% Chapter 1
+
+\chapter{Techniques for characterisation} % Main chapter title
+
+\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+
+\section{X-ray diffraction Studies}
+\begin{figure}[tbh!]
+\centering
+\includegraphics[width=\textwidth]{Figures/XRD}
+\caption{Schematic of Bragg's Law}
+\label{Figures:XRD}
+\end{figure}
+X-ray diffraction is the elastic scattering of x-ray photons by atoms in a periodic lattice. The scattered monochromatic x-rays that are in phase give constructive interference. Figure 2.1 illustrates how diffraction of x-rays by crystal planes allows us to derive lattice spacings by using the Bragg's law. As shown in Figure \ref{Figures:XRD}, the electrons present in an atom scatter the X-ray waves. The phenomenon of X-ray striking an electron and releasing secondary spherical waves is called elastic scattering. With the electron as a "scatterer", the array of atoms in a crystal produce spherical waves. The waves add constructively in a few specified directions  and is determined by Bragg's law.
+ \begin{equation} \label{eq1}
+     2d\sin\theta = n\lambda
+ \end{equation}
+where d is the spacing between diffracting planes, $\theta$ is the incident angle, n is any integer, and $\lambda$ is the wavelength of the incident beam. We get an X-ray diffraction from an electromagnetic wave striking a repeating arrangement of electrons within the crystal. X-rays produce the diffraction pattern because their wavelength λ is typically the same order of magnitude (1–100 \AA ) as the d-spacing between the crystal planes. According to \ref{eq1} any decrease in 2$\theta$ suggests an increase in the d-spacing. This increase can be attributed to intercalation of ions that take place during electrochemical reactions. XRD helps us detect these changes and determine the cell mechanism.
+
+\section{Raman spectroscopy}
+
+Raman spectroscopy is a technique used to determine vibrational modes of molecules. It is commonly used to provide a structural fingerprint to identify molecules.
+\begin{figure}[tbh!]
+\centering
+\includegraphics[width=\textwidth]{Figures/Raman}
+\caption{Here, the sample is illuminated with a laser beam (blue box). Electromagnetic radiation from the illuminated spot is collected with a lens and sent through a Michelson interferometer (orange box), which produces interference between two beams of light. Elastic scattered radiation at the wavelength corresponding to the laser line is filtered out by a dielectric filter (blocking unwanted wavelengths), while the rest of the collected light is dispersed onto a charged coupled device (CCD)detector, which is a highly sensitive photon detector (green box).}
+\label{Figures:Raman}
+\end{figure}
+This technique uses the inelastic scattering of photons, also known as Raman scattering. A source of monochromatic light, usually from a laser in the visible, near infrared, or near ultraviolet range is used (Figure \ref{Figures:Raman}). The laser light interacts with molecular vibrations, phonons or other excitations in the system, resulting in the energy of the laser photons being shifted up (blue-shift) or down (red-shift). The shift in energy gives information about any changes taking place in the vibrational modes of a material. 
+
+\section{X-ray photoelectron spectroscopy}
+\begin{figure}[tbh!]
+\centering
+\includegraphics[width=\textwidth]{Figures/XPS}
+\caption{}
+\label{Figures:XPS}
+\end{figure}
+To measure elemental composition and oxidation states of various elements, X-ray photoelectron spectroscopy is used. It is a surface-based technique that quantitatively analyses a sample. By irradiating a sample with a beam of X-rays, kinetic energy and number of electrons escaping from the top 10 nm of the sample are measured, in Figure \ref{Figures:XPS}. Since  electron counting detectors in XPS instruments are typically one meter away from the material, a long path length for detection requires low pressures. The instrument requires high vacuum (10$^−^8$ millibar) conditions to count these electrons. The electron emission after irradiation is also called a 'photoelectron effect'. These electrons are separated according to their energies and counted. A normal XPS spectrum is a plot of the number of electrons detected versus the binding energy of the electrons detected. The set of XPS peaks produced at certain binding energies values helps in identifying all the elements, and their chemical environment, that exist in the sample. In practice, XPS detects all elements from lithium and above. It cannot easily detect hydrogen or helium because helium has a very small cross-sectional area for photoemission and hydrogen only has one electron which is used in making bonds with  small photoelectron cross-section. Detection limits for most of the elements are in the parts per thousand range. XPS has been steadily used in batteries to study the different oxidation states of active materials during cell charge/ discharge. One can deduce a battery's mechanism using this tool.
+Redox processes taking place inside the each AIB were studied with the help of this technique. For example, in Al/\ce{MoSe2} cells, molybdenum oxidised from \ce{Mo^{+4}} to \ce{Mo^{5+}} when the cells charged. The 2p orbital of Mo had a different binding energy in \ce{MoSe2} in its pristine state but had a different binding energy in \ce{MoO3}. 
+\section{Cyclic voltammetry}
+Cyclic Voltammetry (CV) is an electrochemical technique which measures the current that develops in an electrochemical cell under conditions where voltage is in excess of that predicted by the Nernst equation. CV is performed by cycling the potential of a working electrode, and measuring the resulting current. The potential of the working electrode is measured against a reference electrode which maintains a constant potential, and the resulting applied potential produces an excitation signal such as that of figure 1.² In the forward scan of figure 1, the potential first scans negatively, starting from a greater potential (a) and ending at a lower potential (d). The potential extrema (d) is call the switching potential, and is the point where the voltage is sufficient enough to have caused an oxidation or reduction of an analyte. The reverse scan occurs from (d) to (g), and is where the potential scans positively. Figure 1 shows a typical reduction occurring from (a) to (d) and an oxidation occurring from (d) to (g). It is important to note that some analytes undergo oxidation first, in which case the potential would first scan positively. This cycle can be repeated, and the scan rate can be varied. The slope of the excitation signal gives the scan rate used.
+A cyclic voltammogram is obtained by measuring the current at the working electrode during the potential scans.² Figure 2 shows a cyclic voltammogram resulting from a single electron reduction and oxidation. Consider the following reversible reaction. n Figure 2, the reduction process occurs from (a) the initial potential to (d) the switching potential. In this region the potential is scanned negatively to cause a reduction. The resulting current is called cathodic current (ipc). The corresponding peak potential occurs at (c), and is called the cathodic peak potential (Epc). The Epc is reached when all of the substrate at the surface of the electrode has been reduced. After the switching potential has been reached (d), the potential scans positively from (d) to (g). This results in anodic current (Ipa) and oxidation to occur. The peak potential at (f) is called the anodic peak potential (Epa), and is reached when all of the substrate at the surface of the electrode has been oxidized.
+\section{Charge/discharge process}
+%The  galvanostatic  charge  discharge  is  a  reliable  method  to  evaluate  the  electrochemical capacitance of materialsunder controlled current conditions.This technique is very different from cyclic  voltammetry  because the current is controlled and the voltageis  measured. This  is  indeed one of the most widely used techniques  in the field of supercapacitor because  it can be extended Experimental Techniques62from  a  laboratory  scale  to  an  industrial  one.  This  method  is  also  called  as  chronopotentiometry and gives access to various parameters such as:
+Capacitance
+Resistance 
+Cyclability 
+%In  this  method,  a  current  pulse  is  applied  to the working  electrode  and  the  resulting  potential  is measured  against  a  reference  electrode  as a function  of  time.  At  the  moment  current  is  applied, the measured potential is abruptly changes due to the IR (internal resistance) loss and after that it gradually changes because concentration over-potential is developed across the electrodes,as the concentration of the reactant is exhausted at the electrode surface.The voltage variation is given by the equation:
+V(t) = (V)
+%where,V (t) is the voltage as a function of time, ‘R’  is the resistance, ‘C’  is the capacitance and ‘i’  is  the  current.  As  can  be  seen  from  eq.  2.12,  the  capacitance  of  the  supercapacitor  can  be calculated  from  the  slope  of  the  galvanostatic  charge-discharge  curve.  For  a  pseudocapacitor, when  the  V-t  curve  profile  is  not  as  linear  as  it  should  be,  the  capacitance  can  be  calculated  by integrating the current over the discharge time or charge time:
+C = (2.13)
+C =(2.14)
+%where,‘I’ is the set current, ‘Δt’ is the discharge time (or charge time) and ‘ΔV’ is the potential window. The series resistance is deduced from the voltage drop (V drop) occurring over the current inversion (ΔI) and is given as: R = (2.15)
+%When current is inversed or interrupted, the voltage drop is directly linked to the resistance of the cell.  By  repeating  both the  parameters  of capacitance  and  resistance  measurements  over large number of cycles,  it  is then also possible to determine the cyclic  stability of supercapacitor cells (EDLCs or redox capacitors). 
+
+
