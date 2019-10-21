@@ -22,12 +22,11 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass
-% \documentclass[blind,alpha-refs]{wiley-article}
+\documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
 %oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
 english, % ngerman for German
-onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
 %liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
@@ -38,16 +37,31 @@ headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{name} % The class file specifying the document structure
+\usepackage{siunitx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{gensymb}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{mathpazo} % Use the Palatino font by default
-\renewcommand{\arraystretch}{1.5}
+\usepackage[version=4]{mhchem}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+
+  % hyperlinks
+    % simple URL typesetting
+
+
+% Use the Palatino font by default
+
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\addbibresource{thesisref.bib} % The filename of the bibliography
+
+\addbibresource{thesisref2.bib} % The filename of the bibliography
+
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
+
 \geometry{
 	paper=a4paper, % Change to letterpaper for US letter
 	inner=2.5cm, % Inner margin
@@ -57,6 +71,7 @@ headsepline, % Uncomment to get a line under the header
 	bottom=1.5cm, % Bottom margin
 	%showframe, % Uncomment to show how the type block is set on the page
 }
+
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
@@ -73,14 +88,14 @@ headsepline, % Uncomment to get a line under the header
 \university{\href{http://www.university.com}{University Name}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 \department{\href{http://department.university.com}{Department or School Name}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
 \group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{\href{http://faculty.university.com}{Faculty Name}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+ % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 }
-\bibliography{thesisref}
+
 \begin{document}
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
@@ -253,11 +268,9 @@ $\omega$ & angular frequency & \si{\radian} \\
 
 \include{Chapters/chap1}
 \include{Chapters/chap2} 
-\include{Chapters/chap3}
+%\include{Chapters/chap3}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
-%\include{Chapters/chap6} 
-%\include{Chapters/chap7}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -273,7 +286,7 @@ $\omega$ & angular frequency & \si{\radian} \\
 %\include{Appendices/AppendixC}
 
 %----------------------------------------------------------------------------------------
-BIBLIOGRAPHY
+%	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
 \printbibliography[heading=bibintoc]
