@@ -28,18 +28,18 @@
 english, % ngerman for German
 singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
-%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
 %toctotoc, % Uncomment to add the main table of contents to the table of contents
 %parskip, % Uncomment to add space between paragraphs
 %nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
-%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{name} % The class file specifying the document structure
 \usepackage{siunitx}
 %\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{gensymb}
+\usepackage{expl3}
 \usepackage{algorithm2e}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -49,8 +49,6 @@ headsepline, % Uncomment to get a line under the header
 
   % hyperlinks
     % simple URL typesetting
-
-
 % Use the Palatino font by default
 
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
@@ -77,18 +75,19 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
-\supervisor{Dr. James \textsc{Smith}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
-\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\thesistitle{New cathodes for rechargeable non-aqueous aluminium-ion batteries} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Thomas \textsc{Nann}\\ Jim \textsc{Johnston}} 
+% Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+%\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Doctor of Philosophy} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
-\author{John \textsc{Smith}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
-\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+\author{Shalini \textsc{Divya}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+%\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
-\subject{Biological Sciences} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
-\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
-\university{\href{http://www.university.com}{University Name}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
-\department{\href{http://department.university.com}{Department or School Name}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\subject{Chemistry} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+%\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{http://www.vuw.ac.nz}{Victoria University of Wellington}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{School of Chemical and Physical Sciences} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+%\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
  % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \AtBeginDocument{
@@ -96,9 +95,7 @@ headsepline, % Uncomment to get a line under the header
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 }
-
 \begin{document}
-
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
@@ -126,8 +123,8 @@ headsepline, % Uncomment to get a line under the header
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushright} \large
-\emph{Supervisor:} \\
-\href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\emph{Supervisors:} \\
+\href{http://www.jamessmith.com}{\supname}% Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
  
@@ -135,7 +132,7 @@ headsepline, % Uncomment to get a line under the header
 
 \large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
 \textit{in the}\\[0.4cm]
-\groupname\\\deptname\\[2cm] % Research group name and department name
+\deptname \\[2cm] % Research group name and department name
  
 \vfill
 
@@ -178,9 +175,9 @@ headsepline, % Uncomment to get a line under the header
 
 \vspace*{0.2\textheight}
 
-\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+\noindent\enquote{\itshape Where the mind is without fear and the head is held high. Where knowledge is free.}\bigbreak
 
-\hfill Dave Barry
+\hfill Rabindranath Tagore
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
@@ -253,13 +250,11 @@ $\omega$ & angular frequency & \si{\radian} \\
 %----------------------------------------------------------------------------------------
 %	DEDICATION
 %----------------------------------------------------------------------------------------
-
 \dedicatory{For/Dedicated to/To my\ldots} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
-
 \mainmatter % Begin numeric (1,2,3...) page numbering
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
@@ -272,8 +267,9 @@ $\omega$ & angular frequency & \si{\radian} \\
 %\include{Chapters/chap3}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
- \include{Chapters/chap6}
-%\include{Chapters/chap7}
+%\include{Chapters/BOhBN}
+%\include{Chapters/chap6}
+\include{Chapters/chap7}
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
@@ -283,9 +279,8 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-%\include{Appendices/AppendixA}
-%\include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
+\include{Appendices/appA}
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
@@ -294,5 +289,4 @@ $\omega$ & angular frequency & \si{\radian} \\
 \printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
-
-\end{document}  
+\end{document}
