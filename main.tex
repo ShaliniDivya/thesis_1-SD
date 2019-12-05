@@ -23,10 +23,10 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-12pt, % The default document font size, options: 10pt, 11pt, 12pt
-%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
 english, % ngerman for German
-singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
 liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
@@ -47,6 +47,13 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage{mathpazo}
 \usepackage{amsmath}
 \usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{fourier, heuristica}
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\usepackage{lmodern}
   % hyperlinks
     % simple URL typesetting
 % Use the Palatino font by default
@@ -61,15 +68,14 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
 
-\geometry{
-	paper=a4paper, % Change to letterpaper for US letter
+\geometry{paper=a4paper, % Change to letterpaper for US letter
 	inner=2.5cm, % Inner margin
 	outer=3.8cm, % Outer margin
-	bindingoffset=.5cm, % Binding offset
+	bindingoffset=0.5cm, % Binding offset
 	top=1.5cm, % Top margin
-	bottom=1.5cm, % Bottom margin
+	bottom=1.5cm} % Bottom margin
 	%showframe, % Uncomment to show how the type block is set on the page
-}
+\begin{document}
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
@@ -95,27 +101,22 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 }
-\begin{document}
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
+%---------------------------------------------------------------------------------------
 \begin{titlepage}
 \begin{center}
-
 \vspace*{.06\textheight}
 {\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
 \textsc{\Large Doctoral Thesis}\\[0.5cm] % Thesis type
-
 \HRule \\[0.4cm] % Horizontal line
 {\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
 \HRule \\[1.5cm] % Horizontal line
- 
-\begin{minipage}[t]{0.4\textwidth}
+ \begin{minipage}[t]{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
 \href{http://www.johnsmith.com}{\authorname} % Author name - remove the \href bracket to remove the link
@@ -127,9 +128,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \href{http://www.jamessmith.com}{\supname}% Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
- 
-\vfill
-
+ \vfill
 \large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
 \textit{in the}\\[0.4cm]
 \deptname \\[2cm] % Research group name and department name
@@ -251,7 +250,6 @@ $\omega$ & angular frequency & \si{\radian} \\
 %	DEDICATION
 %----------------------------------------------------------------------------------------
 \dedicatory{For/Dedicated to/To my\ldots} 
-
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
@@ -262,14 +260,15 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
-%\include{Chapters/chap1}
+\include{Chapters/chap1}
 %\include{Chapters/chap2} 
 %\include{Chapters/chap3}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
-%\include{Chapters/BOhBN}
-\include{Chapters/chap6}
+%include{Chapters/BOhBN}
+%\include{Chapters/chap6}
 %\include{Chapters/chap7}
+%\include{Chapters/chap9}
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------

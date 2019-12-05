@@ -206,7 +206,7 @@
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM THESIS INFORMATION COMMANDS
 %----------------------------------------------------------------------------------------
-
+\newcommand{\foo}{\hspace{-4.3pt}$\bullet$ \hspace{5pt}}
 \NewDocumentCommand{\thesistitle} { o m }{%
  \IfValueTF{#1}{\def\shorttitle{#1}}{\def\shorttitle{#2}}%
  \def\@title{#2}%
@@ -513,9 +513,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\addtocounter{table}{-1}% Don't count this table as one of the document tables
 	\ifbool{nolistspace}{\endgroup}{}
 }
-
-%----------------------------------------------------------------------------------------
-
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
 \AtEndPreamble{\RequirePackage{hyperref}
 \hypersetup{pdfpagemode={UseOutlines},
@@ -537,7 +534,8 @@ breaklinks=true,
 	}
 }{%nothing
 }
-
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-1pt\vrule width 5pt\hspace{\labelsep}}
 %----------------------------------------------------------------------------------------
 
 \endinput
