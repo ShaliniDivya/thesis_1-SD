@@ -535,7 +535,7 @@ breaklinks=true,
 }{%nothing
 }
 \DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
-\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-1pt\vrule width 5pt\hspace{\labelsep}}
+%\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-1pt\vrule width 5pt\hspace{\labelsep}}
 %----------------------------------------------------------------------------------------
 
 \endinput
