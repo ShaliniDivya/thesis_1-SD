@@ -1,11 +1,15 @@
 % Chapter 1
 \section*{Preface}
-In this chapter, we talk about the techniques used in our work to establish mechanism of a working battery. 
+This chapter discusses the characterisation techniques that were implemented post-mortem, to fully analyse how a battery works. Electrochemical processes such as cyclic voltammetry and galvanostatic charge/ discharge curves have been discussed in detail.   
+
 \pagebreak
+
 \chapter{Techniques for characterisation} % Main chapter title
+
 \label{chap2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
-Performance of a cell cannot be evaluated without two techniques: galvanostatic charge/discharge cycle and cyclic voltammetry. A charge/discharge cycle displays the specific capacity of a material. CV scans help in understanding the voltage profile of a cell.
-After continuous charge/discharge cycles, a cathode material undergoes structural changes. To study these changes, we need a few analytical tools. 
+
+Performance of a battery cannot be assessed without galvanostatic charge and discharge cycles and cyclic voltammetry (CV). Battery potential is determined by the stability of its electrolyte. CV scans help in determining the voltage range of a cell. A charge/discharge cycle (CDC) on the other hand helps in evaluating a cell's specific capacity and nominal (discharge) voltage. Long term CDCs are necessary to verify a cell's stability and observe whether it can be put to commercial use or not. 
+During continuous charge and discharge, a cathode material undergoes many changes. For example, distance between two layers should increase when intercalation takes place. Or, the oxidation states of a metal should change when it oxidises or reduces itself during cycles. Analytical tools are needed to study the following changes. 
 
 \begin{itemize}
     \item Changes in the crystal lattice of a material can be studied in its XRD patterns 
@@ -13,53 +17,14 @@ After continuous charge/discharge cycles, a cathode material undergoes structura
     \item Changes in the vibrational mode of a molecule can be observed in its Raman spectra 
 \end{itemize}
 
-\section{X-ray diffraction Studies}
-Diffraction of x-rays by crystal planes allows us to derive lattice spacings by using the Bragg's law. 
+\section{Galvanostatic charge/discharge cycles}
+Galvanostatic charge and discharge is a method to evaluate the amount of charge stored in a cell, typically under constant current. The technique measures voltage at a controlled or fixed current rate. Since the current is repeatedly reversed, it is also known as 'cyclic chronopotentiometry'. It is used to estimate the specific capacity and cycling stability of a cell. The total quantity of electricity per mass available from a fully charged cell can be calculated, from the charge transferred during discharge in terms of mAh g$^{-1}$. Specific discharge capacity is frequently measured at different discharging rates to establish rate capability of a cell \cite{pyun_electrochemistry_2012-1}. The voltage profile obtained can be used to identify multi-step redox reactions, in Figure \ref{Figures/chap2fig:ChrononCDC}. 
 
- \begin{equation} \label{eq1}
-     2d\sin\theta \text= n{\lambda}
- \end{equation}
- where d = spacing between diffracting planes,\\
-$\theta$ = incident angle,\\ 
-n = any integer, and \\
-$\lambda$ = wavelength of the incident beam. X-rays produce the diffraction pattern because their wavelength $\lambda$ is typically the same order of magnitude (1-100 $\AA$ ) as the d-spacing between the crystal planes. According to Eq.\ref{eq1} any decrease in 2$\theta$ suggests an increase in the d-spacing. 
-A pure crystalline sample such as \ce{MoS2} (Figure \ref{Figures/chap2fig:XRD}a) yields sharp peaks in a XRD pattern since it has a long ordered structure. Random orientation of the powdered material is attained after scanning the sample through a range of 2$\theta$ angles. Conversion of the diffraction peaks to d-spacings allows identification of the sample because each sample has a set of unique d-spacings. Typically, d-spacings of the sample are compared with standard reference patterns (ICDD or JCPDS). For determination of unit cell parameters, each reflection must imply a specific lattice plane indicated by miller indices \textit{hkl} (labelled in red). Structure of activated carbon is much less ordered than graphite. Its pattern shows line broadening of the major diffraction bands, which exist at $\sim$ 25 \textdegree and $\sim$ 44 \textdegree .
-%X-ray diffraction shows line broadening of only the principal graphite diffraction bands. This broadening is usually interpreted in terms of dimensions of a hypothetical crystallite. Although the crystallite concept has been used when comparing structures in carbons, it has to be stressed that the crystallite does not exist as such within these structures. The disorganized carbon are present in cross-linkage structures [15] forming non-crystallite structures to form microstructures! 
-The Panalytical X-Ray diffractometer was used to record the XRD patterns using Cu-K$\alpha$ radiation at an operating voltage of 45 kV and a 40 mA current. The patterns were run with copper radiation ($\lambda$ =1.5405\AA) at a scanning speed of 2\textdegree in 20 minutes. 
-
-\begin{figure}[tbh!]
+\begin{figure}[th!]
 \centering
-\includegraphics[width=\textwidth]{Figures/chap2fig/XRD}
-\caption{XRD pattern of a) bulk molybdenum disulfide and b) activated carbon.}
-\label{Figures/chap2fig:XRD}
-\end{figure}
-
-\section*{Sample preparation}
-The cell was disassembled inside a glove box to prevent the cathode from any contact with air or moisture. The cathode was taken out and washed with dry ethanol to get rid of any remaining electrolyte residue. Since the loading of active material was very low ($\sim$2 mg), the entire electrode (active material coated on molybdenum foil) was mounted on the sample holder for analysis. 
-
-\section{Raman spectroscopy}
-Raman spectroscopy is a technique, which is used to determine vibrational modes of a molecule. A source of monochromatic light, usually from a laser, interacts with molecular vibrations in the system, resulting in the energy of the laser photons being shifted up (blue shift) or down (red shift). The shift in energy gives information about any changes taking place in the vibrational modes of a material. 
-%This technique uses the inelastic scattering of photons, also known as Raman scattering. 
-\begin{figure}[tbh!]
-\centering
-\includegraphics[width=\textwidth]{Figures/chap2fig/Raman}
-\caption{XRD pattern of bulk molybdenum disulfide.}
-\label{Figures/chap2fig:Raman}
-\end{figure}
-
-%Flat and spinner stage?
-
-\section{X-ray photoelectron spectroscopy}
- X-ray photoelectron spectroscopy is used to measure elemental composition and oxidation states of various elements. It is a surface-based technique that quantitatively analyses a sample. By irradiating a sample with a beam of X-rays, kinetic energy and number of electrons escaping from the top 10 nm of the sample are measured. 
-%The instrument requires high vacuum (10$^{-8}$ millibar) conditions to count these electrons. The electron emission after irradiation is also called a 'photoelectron effect'. These electrons are separated according to their energies and counted. ,
-A normal XPS spectrum is a plot of the number of electrons detected versus the binding energy of the electrons detected. The set of XPS peaks produced at certain binding energies values helps in identifying all the elements, and their chemical environment, that exist in the sample. 
-In practice, XPS detects all elements from lithium and above. It cannot easily detect hydrogen or helium because helium has a very small cross-sectional area for photoemission and hydrogen only has one electron which is used in making bonds with  small photoelectron cross-section. Detection limits for most of the elements are in the parts per thousand range. XPS is used to study redox processes taking place in a cell. For example, in Al/\ce{MoSe2} cells, molybdenum oxidised from \ce{Mo^{+4}} to \ce{Mo^{5+}} when the cells charged. 
-
-\begin{figure}[tbh!]
-\centering
-\includegraphics[width=\textwidth]{Figures/chap2fig/XPS}
-\caption{XRD pattern of bulk molybdenum disulfide.}
-\label{Figures/chap2fig:XPS}
+\includegraphics[width=\textwidth]{Figures/chap2fig/ChrononCDC}
+\caption{a) Chronopotentiogram- a graph of electric potential versus time, at constant current. b) A galvanostatic charge/discharge curve showing the voltage plateaus at which reactions occur and the charging/discharging capacity.}
+\label{Figures/chap2fig:ChrononCDC}
 \end{figure}
 
 \section{Cyclic voltammetry}
@@ -74,12 +39,57 @@ Cyclic voltammetry (CV) is a technique which measures the current that develops 
 
 Scan rates play a very important role too. If a CV is run on a slower scan rate (0.05 mV s$^{-1}$), diffusion layer grows farther from the electrode, which reduces the flux, consequently decreasing the current value. At a faster scan rate lead (1 V s$^{-1}$), the size of the diffusion layer decreases and higher currents are recorded. Cyclic voltammetry is a helpful tool in understanding the presence of a surface reaction and its reversibility during cell cycles. It can be used for both single-electron and multi-electron processes.  
 
-\section{Galvanostatic charge/discharge cycles}
-Galvanostatic  charge and discharge is a method to evaluate the amount of charge stored in a cell typically under constant current. The technique measures voltage at a controlled or fixed current rate. Since the current is repeatedly reversed, it is also known as 'cyclic chronopotentiometry'. It is generally used to estimate their specific capacities and cycling stability of a cell. The total quantity of electricity per mass available from a fully charged cell can be calculated, from the charge transferred during discharge in terms of mAh g$^{-1}$. Specific discharge capacity is frequently measured at different discharging rates to establish rate capability of a cell \cite{pyun_electrochemistry_2012-1}. The voltage profile obtained can be used to identify multi-step redox reactions, in Figure \ref{Figures/chap2fig:ChrononCDC}. 
+\section*{Sample preparation}
+The cell was disassembled inside a glove box to prevent the cathode from any contact with air or moisture. The cathode was taken out and washed with dry ethanol to get rid of any remaining electrolyte on its surface. It was found that scrapping off the active material from the current collector did not yield enough sample for analysis, since some of it got wasted in the process. Thus, cathode, including the current collector, was used for X-ray diffraction, Raman and X-ray photoelectron spectroscopic analyses.
+
+\section{X-ray diffraction Studies}
+Diffraction of x-rays by crystal planes allows us to derive lattice spacings by using Bragg's law. 
+
+ \begin{equation} \label{eq1}
+     2d\sin\theta \text= n{\lambda}
+ \end{equation}
+ where d = spacing between diffracting planes,\\
+$\theta$ = incident angle,\\ 
+n = any integer, and \\
+$\lambda$ = wavelength of the incident beam. X-rays produce the diffraction pattern because their wavelength $\lambda$ is typically the same order of magnitude (1-100 $\AA$ ) as the d-spacing between the crystal planes. According to Eq.\ref{eq1} any decrease in 2$\theta$ suggests an increase in the d-spacing. 
+A pure crystalline sample such as \ce{MoS2} (Figure \ref{Figures/chap2fig:XRD}a) yields sharp peaks in a XRD pattern since it has a long ordered structure. Random orientation of the powdered material is attained after scanning the sample through a range of 2$\theta$ angles. Conversion of the diffraction peaks to d-spacings allows identification of the sample because each sample has a unique set of d-spacings. Typically, d-spacings of the sample are compared with standard reference patterns (International Centre for Diffraction Data, ICDD). For determination of unit cell parameters, each reflection implies a specific lattice plane indicated by miller indices \textit{hkl} (labelled in red  for \ce{MoS2} crystal lattice). Figure \ref{Figures/chap2fig:XRD}b displays the diffraction pattern of activated carbon obtained from human hair. Since the structure of activated carbon is much less ordered, its pattern shows line broadening of the major diffraction bands, which exist at $\sim$ 25$^{\circ}$  and $\sim$ 44$^{\circ}$.
+X-ray diffraction studies is a useful tool and can easily help in proving intercalation of ions. Rani \textit{et al.} used fluorinated graphite as a cathode for AIBs. The d-spacing values of the discharged graphite cathode were higher than natural graphite. The results indicate that intercalation of aluminum ions in the graphene sheets increase the d-spacing of the graphite crystal\cite{rani_fluorinated_2013-1}.
+%X-ray diffraction shows line broadening of only the principal graphite diffraction bands. This broadening is usually interpreted in terms of dimensions of a hypothetical crystallite. Although the crystallite concept has been used when comparing structures in carbons, it has to be stressed that the crystallite does not exist as such within these structures. The disorganized carbon are present in cross-linkage structures [15] forming non-crystallite structures to form microstructures! 
+Panalytical X-Ray diffractometer was used to record the XRD patterns using Cu-K$\alpha$ radiation at an operating voltage of 45 kV and a 40 mA current. The patterns were run with copper radiation ($\lambda$ =1.5405\AA) at a scanning speed of 2$^{\circ}$ in 20 minutes. 
 
 \begin{figure}[tbh!]
 \centering
-\includegraphics[width=\textwidth]{Figures/chap2fig/ChrononCDC}
-\caption{a) Chronopotentiogram- a graph of electric potential versus time, at constant current. b) A galvanostatic charge/discharge curve showing the voltage plateaus at which reactions occur and the charging/discharging capacity.}
-\label{Figures/chap2fig:ChrononCDC}
+\includegraphics[width=\textwidth]{Figures/chap2fig/XRD}
+\caption{X-ray diffraction pattern of a) bulk molybdenum disulfide (ICDD: 04-001-9285), and b) activated carbon.}
+\label{Figures/chap2fig:XRD}
 \end{figure}
+
+\section{Raman spectroscopy}
+Raman spectroscopy is a technique, which is used to determine vibrational modes of a molecule. A source of monochromatic light, usually from a laser, interacts with molecular vibrations in the system, resulting in the energy of the laser photons being shifted up (blue shift) or down (red shift). The shift in energy gives information about any changes taking place in the vibrational modes of a material. 
+%This technique uses the inelastic scattering of photons, also known as Raman scattering. 
+\begin{figure}[tbh!]
+\centering
+\includegraphics[width=\textwidth]{Figures/chap2fig/Raman}
+\caption{Raman spectra of graphite.}
+\label{Figures/chap2fig:Raman}
+\end{figure}
+
+Graphite is composed of \ce{sp2} bonded carbon atoms in planar sheets. The bond energy of the \ce{sp2} bonds displays its vibrational frequency at 1582 cm$^{-1}$. The presence of additional bands in graphite spectrum indicate that there are some carbon bonds at different bond energies. The D band indicates presence of some disorder in the structure. The ratio of intensity of D/G peaks is a measure of the defects present. Both D and G peaks are the result of vibrations of \ce{sp2} bonded carbon atoms. G band is an outcome of in-plane vibrations, whereas the D peak is due to out of plane vibrations attributed to the presence of structural defects. If the D band is more intense, it means that the \ce{sp2} bonds are broken which in turn means that there are more \ce{sp3} bonds, there will be a maximum D/G ratio. If I$_D$/I$_G$ ratio is higher than pristine sample, it means that defects are present on the material. 
+Raman spectroscopy is a helpful technique in detecting the mechanism of an intercalation-based battery. Wang \textit{et al.} used Raman spectroscopy to show two different intercalation processes involving chloroaluminate anions in a graphite cathode. The Raman data pointed to two different intercalation processes at two different charging plateaus. The first plateau in the charging curve showed G band splitting and the higher voltage plateau showed a single, dominant blue-shifted peak. During discharge, the opposite trends were observed when chloroaluminate anions were deintercalated. The original graphite spectrum was recovered when the cell was fully discharged\cite{wang_advanced_2017}. 
+
+\section{X-ray photoelectron spectroscopy}
+ X-ray photoelectron spectroscopy is used to measure elemental composition and oxidation states of various elements. It is a surface-based technique that quantitatively analyses a sample. By irradiating a sample with a beam of X-rays, kinetic energy and number of electrons escaping from the top 10 nm of the sample are measured. 
+%The instrument requires high vacuum (10$^{-8}$ millibar) conditions to count these electrons. The electron emission after irradiation is also called a 'photoelectron effect'. These electrons are separated according to their energies and counted. ,
+A normal XPS spectrum is a plot of the number of electrons detected versus the binding energy of the electrons detected. XPS helps in studying the redox processes that take place inside a cell. XPS helps in characterising elements species and valence changes of original sample and sample during electrochemical reactions. Understanding curve-fitting of an XPS spectra is important as it suggests the number of chemical states and therefore number of peaks present in a sample. It is essential to apply constraints to restrict the peak widths and relative intensities of the peaks. The peaks were fitted using Shirley background and any observed peak was convoluted using Gaussian and Lorentzian function. \\
+Li \textit{et al.} studied the XPS spectra of \ce{MoS2} microspheres to probe the valence changes and the Al$^{3+}$ storage mechanism during the charging/ discharging process at various charge and discharge states of the cathode \cite{li_rechargeable_2018-2}.
+
+\begin{figure}[tbh!]
+\centering
+\includegraphics[width=\textwidth]{Figures/chap2fig/XPS}
+\caption{X-ray photoelectron spectra of molybdenum disulfide. Molybdenum 3d orbitals appear as a doublet at 229 and 232 eV. The area ratio for the two peaks (3d$_{3/2}$ : 3d$_{5/2}$) was 2:3 (corresponding to two electrons in the 3d$_{3/2}$ level and 4 electrons in the 3d$_{5/2}$ level).}
+\label{Figures/chap2fig:XPS}
+\end{figure}
+
+
+
+
