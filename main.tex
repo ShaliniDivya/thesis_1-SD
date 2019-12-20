@@ -39,7 +39,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 %\usepackage[TS1,T1]{fontenc}
 \usepackage{fourier, heuristica}
 \usepackage{array, booktabs}
-\usepackage{graphicx}
+%\usepackage{graphicx}
 \usepackage{lmodern}
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{8pt}
@@ -143,14 +143,18 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \noindent\enquote{\itshape Where the mind is without fear and the head is held high. Where knowledge is free.}\bigbreak
 \hfill Rabindranath Tagore
 
+\newpage
 %	ABSTRACT PAGE
+\begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too.
-
+Lithium-ion batteries (LIBs) are a popular battery-choice for most applications. However, future battery demand will place increasing pressure on lithium and cobalt reserves and supply lines in the medium and long term[1]. Moreover, the electrolyte used in LIBs is flammable, which is a safety issue that has to be managed. Any mechanical damage to the cell might result in short circuits or thermal runaway reactions, sometimes leading to an explosion.\\
+High abundance and easy accessibility of aluminium resources enable aluminium-ion batteries (AIBs), offer the opportunity to become an ideal alternative. Since a multivalent ion insertion is feasible, higher energy densities can be achieved. Non-aqueous AIBs use a non-flammable ionic liquid as their electrolyte, making them safer than LIBs in this regard. The most common electrolyte for AIBs is currently the ionic liquid 1-ethyl-3-methyl imidazolium chloride ([EMIm]Cl) mixed with aluminium trichloride (\ce{AlCl3}) where a chloroaluminate ion is the active charge-carrying species.\\
+This dissertation focuses on discovering new cathode materials. The author aimed to achieve an AIB with a superior performance over those previously reported. Two-dimensional (2D) layered materials showed potential as active cathode materials since they display similar properties as graphite, which is a popular choice for AIBs. Transition metal dichalcogenides, carbon-based materials, and a few others (oxides, carbides, nitrides) were tested. Results showed that some of the materials displayed high stability and long cycle life and outperformed cathodes existing in current AIB literature. A few of them were thoroughly investigated to establish the underlying mechanism. A novel cathode material was patented and is currently in the process of commercialisation!
+\end{abstract}
 %	ACKNOWLEDGEMENTS
 \begin{acknowledgements}
 \addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
+%During the write up of my M.Sc thesis, I wish to take the opportunity to acknowledge everyone who played a very important role in helping me carry out my project work in a peaceful environment. First and foremost, I would like to express the deepest appreciation to my supervisor and mentor, Dr. Poulomi Roy, Assistant Professor, Department of Chemistry, Birla Institute of Technology, Mesra for her excellent guidance and constant encouragement. Without her persistent help, this dissertation would not have been possible. I could not have imagined a better advisor and mentor with such friendly behavior for my project work. I owe my sincere thanks to Dr. Suneel Kumar Srivastava, Associate Professor, Department of Chemistry, Indian Institute of Technology, Kharagpur for his guidance and constant support. I sincerely acknowledge the efforts made by Dr. Tapas Kuila, Surface Engineering & Tribology Division, Council of Scientific & Industrial Research – Central Mechanical Engineering Research Institute, Durgapur for his help in all the electrochemical analyses. I would like to express my gratitude to Dr. Jay Prakash Pandey, Head of Department of Chemistry, Birla Institute of Technology, Mesra for sharing his pearls of wisdom during my project work. I also express my regards to our Ex- Head of this Department, Professor Usha Jha for helping me in many ways. I would like to acknowledge my deep regards to Dr. Sanjay Swain, Central Instrumentation Facility, BIT Mesra for his help in utilizing the CIF facilities. A heartfelt thanks to Rammani Sir, without him, the SEM analyses would have been impossible. I also wish to thank Suresh Bhaiya and Kishan Bhaiya for their help in many ways. On a personal note, I would like to say a big 'thank you' to all the research scholars for their constant help and support and my friends for their love and affection, making my working days memorable and providing a stimulating atmosphere. The final words in acknowledgement are usually reserved to those dearest to author. I do not wish to break this tradition. Without the love and support from my parents Mr. Roy Upendra Bahadur and Mrs. Sangeeta Prasad and my loving sister Mrs. Nishika Divya. This would not have been possible without their blessings and support.
 \end{acknowledgements}
 
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -159,28 +163,28 @@ The acknowledgments and the people to thank go here, don't forget to include you
 \listoftables % Prints the list of tables
 
 %	ABBREVIATIONS
-\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
-\end{abbreviations}
+%\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+%\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+%\end{abbreviations}
 
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
-\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+%\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
 
 % The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
-Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+%Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
 %Constant Name & $Symbol$ & $Constant Value$ with units\\
-\end{constants}
+%\end{constants}
 
 %	SYMBOLS
-\begin{symbols}{lll} % Include a list of Symbols (a three column table)
-$a$ & distance & \si{\meter} \\
-$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+%a$ & distance & \si{\meter} \\
+%$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
 %Symbol & Name & Unit \\
 
-\addlinespace % Gap to separate the Roman symbols from the Greek
-$\omega$ & angular frequency & \si{\radian} \\
-\end{symbols}
+%\addlinespace % Gap to separate the Roman symbols from the Greek
+%$\omega$ & angular frequency & \si{\radian} \\
+%\end{symbols}
 
 %	DEDICATION
 \dedicatory{For/Dedicated to/To my\ldots} 
@@ -197,7 +201,7 @@ $\omega$ & angular frequency & \si{\radian} \\
 %\include{Chapters/chap3}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
-%include{Chapters/BOhBN}
+%\include{Chapters/BOhBN}
 %\include{Chapters/chap6}
 %\include{Chapters/chap7}
 %\include{Chapters/chap9}
