@@ -26,7 +26,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 %\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{expl3}
 \usepackage{algorithm2e}
-%\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
 %\usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[version=4]{mhchem}
 \usepackage{mathpazo}
@@ -153,8 +153,17 @@ This dissertation focuses on discovering new cathode materials. The author aimed
 \end{abstract}
 %	ACKNOWLEDGEMENTS
 \begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-%During the write up of my M.Sc thesis, I wish to take the opportunity to acknowledge everyone who played a very important role in helping me carry out my project work in a peaceful environment. First and foremost, I would like to express the deepest appreciation to my supervisor and mentor, Dr. Poulomi Roy, Assistant Professor, Department of Chemistry, Birla Institute of Technology, Mesra for her excellent guidance and constant encouragement. Without her persistent help, this dissertation would not have been possible. I could not have imagined a better advisor and mentor with such friendly behavior for my project work. I owe my sincere thanks to Dr. Suneel Kumar Srivastava, Associate Professor, Department of Chemistry, Indian Institute of Technology, Kharagpur for his guidance and constant support. I sincerely acknowledge the efforts made by Dr. Tapas Kuila, Surface Engineering & Tribology Division, Council of Scientific & Industrial Research – Central Mechanical Engineering Research Institute, Durgapur for his help in all the electrochemical analyses. I would like to express my gratitude to Dr. Jay Prakash Pandey, Head of Department of Chemistry, Birla Institute of Technology, Mesra for sharing his pearls of wisdom during my project work. I also express my regards to our Ex- Head of this Department, Professor Usha Jha for helping me in many ways. I would like to acknowledge my deep regards to Dr. Sanjay Swain, Central Instrumentation Facility, BIT Mesra for his help in utilizing the CIF facilities. A heartfelt thanks to Rammani Sir, without him, the SEM analyses would have been impossible. I also wish to thank Suresh Bhaiya and Kishan Bhaiya for their help in many ways. On a personal note, I would like to say a big 'thank you' to all the research scholars for their constant help and support and my friends for their love and affection, making my working days memorable and providing a stimulating atmosphere. The final words in acknowledgement are usually reserved to those dearest to author. I do not wish to break this tradition. Without the love and support from my parents Mr. Roy Upendra Bahadur and Mrs. Sangeeta Prasad and my loving sister Mrs. Nishika Divya. This would not have been possible without their blessings and support.
+\addchaptertocentry{\acknowledgementname} 
+Firstly, I would like to express my sincere gratitude to my honorary research advisor and ex-supervisor Prof. Thomas Nann for his continuous support during the course of my Ph.D. and related research. For his patience, immense knowledge and endless motivation that helped me strive forward. I could not have imagined having a better advisor and mentor for my Ph.D. study.\\
+I am forever indebted to Prof. James H. Johnston who stepped up as my primary supervisor after Thomas left Victoria University of Wellington. He continuously guided and encouraged me to be professional and do the right thing even when the roads got tough. It is wholeheartedly appreciated that your great advice for my study proved monumental towards the success of this study. \\
+Besides my advisors, I would like to thank the rest of my thesis committee: Prof. X, Prof. Y, and Dr. Z, for their insightful comments and encouragement, but also for the hard questions, which incented me to widen my research from various perspectives.\\
+I would like to pay my special regards to Dr. Poulomi Roy, who has given me valuable support throughout the course of my Ph.D., the same way she did during my Master's thesis. \\
+Mr. Colin Doyle gave me invaluable help with data and statistics for X-ray photoelectron analysis (XPS) which I used in my project. I wish to show my appreciation to Mr. David Flynn, who helped me with various microscopic imaging (SEM and TEM).\\
+Heartfelt thanks to my fellow lab mates and friends, from past and present, Erin, Garima, Geoffry, Jake, Jacob, Moritz, Rohan and Vaibhav for the thought-provoking discussions, and for all the fun we have had in the last three years. In particular, I am grateful to Dr. Nicolo Canever, whose assistance was a milestone in the completion of this dissertation. Their presence was very important as they are the ones with whom I have shared moments of deep anxiety but also of big excitement. Special thanks to my friends from New Zealand: Abhi, Chriselle, Isabella, Kai, Leini, Parth, Ronnie, Sreelakshmi, and Tehreema for listening, offering me advice, and supporting me through this entire process. A warm word for my colleague and great friend Fraser, whose words never failed to lift my spirits amid my discouragement.\\
+The final words in acknowledgment are usually reserved for those dearest to the author. I do not wish to break this tradition. Some special words of gratitude go to my friends who have always had my back when things would get a bit disheartening: Arti, Baibhaw, Harsh, Nidhi, and Saket. Thanks, folks for always being there for me. I deeply thank Megha and Payal, my best friends for the past 20 years, who have loved, entertained, and encouraged me to get through this period in the most positive way.\\
+I wish to acknowledge the support and great love of my family, my father, Roy Upendra, my sister, Nishika and her husband, Arindam. I always knew that you wanted the best for me. Thank you for teaching me that my job in life was to learn and most importantly to be happy. This thesis would not have been possible without their endless love and care.\\
+The last word goes for Sangeeta, my mother, for always showing how proud she is of me for the last three years and who has given me the extra strength and motivation to get things done. This thesis is dedicated to her.
+
 \end{acknowledgements}
 
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -187,7 +196,9 @@ This dissertation focuses on discovering new cathode materials. The author aimed
 %\end{symbols}
 
 %	DEDICATION
-\dedicatory{For/Dedicated to/To my\ldots} 
+\dedicatory{
+{\Huge To my mother... because I owe it all to you!}
+} 
 
 %	THESIS CONTENT - CHAPTERS
 \mainmatter % Begin numeric (1,2,3...) page numbering
@@ -203,7 +214,7 @@ This dissertation focuses on discovering new cathode materials. The author aimed
 %\include{Chapters/chap5} 
 %\include{Chapters/BOhBN}
 %\include{Chapters/chap6}
-\include{Chapters/chap7}
+%\include{Chapters/chap7}
 %\include{Chapters/chap9}
 
 %	THESIS CONTENT - APPENDICES
@@ -213,7 +224,7 @@ This dissertation focuses on discovering new cathode materials. The author aimed
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-%\include{Appendices/appA}
+\include{Appendices/appA}
 
 %	BIBLIOGRAPHY
 
