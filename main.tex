@@ -29,6 +29,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 %\usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[version=4]{mhchem}
+\usepackage{hyperref}
 \usepackage{mathpazo}
 \usepackage{amsmath}
 \usepackage{rotating}
@@ -154,14 +155,22 @@ This dissertation focuses on discovering new cathode materials. The author aimed
 %	ACKNOWLEDGEMENTS
 \begin{acknowledgements}
 \addchaptertocentry{\acknowledgementname} 
-Firstly, I would like to express my sincere gratitude to my honorary research advisor and ex-supervisor Prof. Thomas Nann for his continuous support during the course of my Ph.D. and related research. For his patience, immense knowledge and endless motivation that helped me strive forward. I could not have imagined having a better advisor and mentor for my Ph.D. study.\\
-I am forever indebted to Prof. James H. Johnston who stepped up as my primary supervisor after Thomas left Victoria University of Wellington. He continuously guided and encouraged me to be professional and do the right thing even when the roads got tough. It is wholeheartedly appreciated that your great advice for my study proved monumental towards the success of this study. \\
-Besides my advisors, I would like to thank the rest of my thesis committee: Prof. X, Prof. Y, and Dr. Z, for their insightful comments and encouragement, but also for the hard questions, which incented me to widen my research from various perspectives.\\
-I would like to pay my special regards to Dr. Poulomi Roy, who has given me valuable support throughout the course of my Ph.D., the same way she did during my Master's thesis. \\
-Mr. Colin Doyle gave me invaluable help with data and statistics for X-ray photoelectron analysis (XPS) which I used in my project. I wish to show my appreciation to Mr. David Flynn, who helped me with various microscopic imaging (SEM and TEM).\\
-Heartfelt thanks to my fellow lab mates and friends, from past and present, Erin, Garima, Geoffry, Jake, Jacob, Moritz, Rohan and Vaibhav for the thought-provoking discussions, and for all the fun we have had in the last three years. In particular, I am grateful to Dr. Nicolo Canever, whose assistance was a milestone in the completion of this dissertation. Their presence was very important as they are the ones with whom I have shared moments of deep anxiety but also of big excitement. Special thanks to my friends from New Zealand: Abhi, Chriselle, Isabella, Kai, Leini, Parth, Ronnie, Sreelakshmi, and Tehreema for listening, offering me advice, and supporting me through this entire process. A warm word for my colleague and great friend Fraser, whose words never failed to lift my spirits amid my discouragement.\\
-The final words in acknowledgment are usually reserved for those dearest to the author. I do not wish to break this tradition. Some special words of gratitude go to my friends who have always had my back when things would get a bit disheartening: Arti, Baibhaw, Harsh, Nidhi, and Saket. Thanks, folks for always being there for me. I deeply thank Megha and Payal, my best friends for the past 20 years, who have loved, entertained, and encouraged me to get through this period in the most positive way.\\
-I wish to acknowledge the support and great love of my family, my father, Roy Upendra, my sister, Nishika and her husband, Arindam. I always knew that you wanted the best for me. Thank you for teaching me that my job in life was to learn and most importantly to be happy. This thesis would not have been possible without their endless love and care.\\
+There are no proper words to express my sincere gratitude and respect to my research advisor and supervisor Prof. Thomas Nann for his continuous support during the course of my Ph.D. and related research. For his patience, immense knowledge and endless motivation that helped me strive forward. I could not have imagined having a better advisor and mentor for my Ph.D. study.
+I am forever indebted to Prof. James H. Johnston who agreed to be my supervisor after Thomas shifted to Australia. He continuously guided and encouraged me to be professional and do the right thing even when the roads got tough. It is wholeheartedly appreciated that your great advice for my study proved monumental towards the success of this study. 
+
+Besides my advisors, I would like to thank the rest of my thesis committee: Prof. X, Prof. Y, and Dr. Z, for their insightful comments and encouragement, but also for the hard questions, which incented me to widen my research from various perspectives.
+
+I am grateful to all my collaborators with whom I have had the pleasure to work during this and other related projects: Yuta Nakayasu (Assistant professor at Tohoku University, Japan), Nonglak Meethong (Assistant Professor at Khong Kaen University, Thailand), Geoffrey Waterhouse (Associate Professor at University of Auckland, New Zealand), Sara Cavaliere (Lecturer at the University of Montpellier, France) and Ossie Amir (CEO, Carbon Valley, New Zealand).
+
+Mr. Colin Doyle gave me invaluable help with data and statistics for X-ray photoelectron analysis (XPS) which I used in my project. I wish to show my appreciation to Mr. David Flynn, who helped me with various microscopic imaging (SEM and TEM).
+
+I would like to express my gratitude to Mrs. Jayoti Chakraborty, who was a wonderful teacher and inspired me to study chemistry.
+
+Heartfelt thanks to my fellow lab mates and friends, from past and present, Erin, Garima, Geoffry, Jake, Jacob, Moritz, Rohan and Vaibhav for the thought-provoking discussions, and for all the fun we have had in the last three years. In particular, I am grateful to Dr. Nicolo Canever, whose assistance was a milestone in the completion of this dissertation. Their presence was very important as they are the ones with whom I have shared moments of deep anxiety but also of big excitement. Special thanks to my friends from New Zealand: Abhi, Chriselle, Isabella, Kai, Leini, Parth, Ronnie, Sreelakshmi, and Tehreema for offering me advice, and supporting me throughout this entire process. A warm word for my colleague and great friend Fraser, whose words never failed to lift my spirits amid my discouragement.\\
+The final words in acknowledgment are usually reserved for those dearest to the author. I do not wish to break this tradition. I would like to pay my special regards to Dr. Poulomi Roy for guiding me towards the right path, the same way she did during my Master's thesis. She taught me so much, but also went beyond that to show her love and care. 
+
+Some special words of gratitude go to my friends who have always had my back when things would get a bit disheartening: Arti, Baibhaw, Harsh, and Saket. Thank you for always being there for me. I deeply thank Megha and Payal, my best friends for the past 20 years, who have loved, entertained, and encouraged me to get through this period in the most positive way.
+I wish to acknowledge the support and great love of my family, my father, Roy Upendra, my sister, Nishika and her husband, Arindam. Thank you for teaching me that my job in life was to learn and most importantly to be happy. This thesis would not have been possible without their endless love and care.\\
 The last word goes for Sangeeta, my mother, for always showing how proud she is of me for the last three years and who has given me the extra strength and motivation to get things done. This thesis is dedicated to her.
 
 \end{acknowledgements}
@@ -206,16 +215,17 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
-%\include{Chapters/aimnstruc}
-%\include{Chapters/chap1}
-%\include{Chapters/chap2} 
-%\include{Chapters/chap3}
-%\include{Chapters/chap4} 
-%\include{Chapters/chap5} 
-%\include{Chapters/BOhBN}
-%\include{Chapters/chap6}
-%\include{Chapters/chap7}
-%\include{Chapters/chap9}
+\include{Chapters/papncon}
+\include{Chapters/aimnstruc}
+\include{Chapters/chap1}
+\include{Chapters/chap3} 
+\include{Chapters/chap2}
+\include{Chapters/chap4} 
+\include{Chapters/chap5} 
+\include{Chapters/BOhBN}
+\include{Chapters/chap6}
+\include{Chapters/chap7}
+\include{Chapters/chap9}
 
 %	THESIS CONTENT - APPENDICES
 
