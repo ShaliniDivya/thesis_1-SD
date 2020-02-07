@@ -25,7 +25,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage{siunitx}
 %\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{expl3}
-\usepackage{algorithm2e}
+%\usepackage{algorithm2e}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[version=4]{mhchem}
@@ -35,9 +35,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage{rotating}
 \usepackage{multirow}
 \usepackage{adjustbox}
-\usepackage{tikz}
-\usetikzlibrary{shapes,positioning}
-\usepackage[TS1,T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage{fourier, heuristica}
 \usepackage{array, booktabs}
 \usepackage{graphicx}
@@ -48,7 +46,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
   % hyperlinks
     % simple URL typesetting
 % Use the Palatino font by default
-
+%\usepackage{babel}
 \usepackage[backend=bibtex,style=numeric-comp,natbib=true,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{Thesis2.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
@@ -217,13 +215,13 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 % Uncomment the lines as you write the chapters
 %\include{Chapters/aimnstruc}
 %\include{Chapters/papncon}
-%\include{Chapters/chap1} 
+\include{Chapters/chap1} 
 %\include{Chapters/chap3} 
 %\include{Chapters/chap2}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
 %\include{Chapters/BOhBN}
-\include{Chapters/chap6}
+%\include{Chapters/chap6}
 %\include{Chapters/chap7}
 %\include{Chapters/chap9}
 
@@ -237,7 +235,5 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 \include{Appendices/appA}
 
 %	BIBLIOGRAPHY
-
 \printbibliography
-
 \end{document}
