@@ -29,17 +29,20 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[version=4]{mhchem}
+\usepackage{threeparttable}
 \usepackage{hyperref}
 \usepackage{mathpazo}
 \usepackage{amsmath}
+\usepackage{pdfpages}
 \usepackage{rotating}
 \usepackage{multirow}
 \usepackage{adjustbox}
-\usepackage[T1]{fontenc}
-\usepackage{fourier, heuristica}
+\usepackage{amssymb}
+%\usepackage{mathtools}
+%\usepackage{fourier, heuristica}
 \usepackage{array, booktabs}
 \usepackage{graphicx}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{8pt}
 \renewcommand{\arraystretch}{1.5}
@@ -48,7 +51,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 % Use the Palatino font by default
 %\usepackage{babel}
 \usepackage[backend=bibtex,style=numeric-comp,natbib=true,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\addbibresource{Thesis2.bib} % The filename of the bibliography
+\bibliography{Thesis2.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 %	MARGIN SETTINGS
@@ -148,7 +151,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 Lithium-ion batteries (LIBs) are a popular battery-choice for most applications. However, future battery demand will place increasing pressure on lithium and cobalt reserves and supply lines in the medium and long term. Moreover, the electrolyte used in LIBs is flammable, which is a safety issue that has to be managed. Any mechanical damage to the cell might result in short circuits or thermal runaway reactions, sometimes leading to an explosion.\\
 High abundance and easy accessibility of aluminium resources enable aluminium-ion batteries (AIBs), offer the opportunity to become an ideal alternative. Since a multivalent ion insertion is feasible, higher energy densities can be achieved. Non-aqueous AIBs use a non-flammable ionic liquid as their electrolyte, making them safer than LIBs in this regard. The most common electrolyte for AIBs is currently the ionic liquid 1-ethyl-3-methyl imidazolium chloride ([EMIm]Cl) mixed with aluminium trichloride (\ce{AlCl3}) where a chloroaluminate ion is the active charge-carrying species.\\
-This dissertation focuses on discovering new cathode materials. The author aimed to achieve an AIB with a superior performance over those previously reported. Two-dimensional (2D) layered materials showed potential as active cathode materials since they display similar properties as graphite, which is a popular choice for AIBs. Transition metal dichalcogenides, carbon-based materials, and a few others (oxides, carbides, nitrides) were tested. Results showed that some of the materials displayed high stability and long cycle life and outperformed cathodes existing in current AIB literature. A few of them were thoroughly investigated to establish the underlying mechanism. A novel cathode material was patented and is currently in the process of commercialisation!
+This dissertation focuses on discovering new cathode materials. The author aimed to achieve an AIB with a superior performance over those previously reported. Two-dimensional (2D) layered materials showed potential as active cathode materials since they display similar properties as graphite, which is a popular choice for AIBs. Transition metal dichalcogenides-- bulk and nanostructured molybdenum disulfide (\ce{MoS2}), molybdenum diselenide (\ce{MoSe2}, and molybdenum sulfide selenide (MoSSe)), carbon-based materials-- activated carbon from human hair, hemp fibres, mixture of fullerenes, and conductive carbon, and a few other materials such as tin oxide (\ce{SnO2}), molybdenum trioxide (\ce{MoO3}), graphitic-carbon nitride (g-\ce{C3N4}), and various combinations of metal oxides and, group 13 and 14 nitrides were tested. Results showed that some of the materials displayed high stability and long cycle life and outperformed cathodes existing in current AIB literature. Molybdenum dichalcogenides and carbon-based materials were thoroughly investigated and an attempt was made to establish the underlying mechanism. h-BN/\ce{B2O3} was patented and is currently in the process of commercialisation.
 \end{abstract}
 %	ACKNOWLEDGEMENTS
 \begin{acknowledgements}
@@ -164,7 +167,7 @@ Mr. Colin Doyle gave me invaluable help with data and statistics for X-ray photo
 
 I would like to express my gratitude to Mrs. Jayoti Chakraborty, who was a wonderful teacher and inspired me to study chemistry.
 
-Heartfelt thanks to my fellow lab mates and friends, from past and present, Erin, Garima, Geoffry, Jake, Jacob, Moritz, Rohan and Vaibhav for the thought-provoking discussions, and for all the fun we have had in the last three years. In particular, I am grateful to Dr. Nicolo Canever, whose assistance was a milestone in the completion of this dissertation. Their presence was very important as they are the ones with whom I have shared moments of deep anxiety but also of big excitement. Special thanks to my friends from New Zealand: Abhi, Chriselle, Isabella, Kai, Leini, Parth, Ronnie, Sreelakshmi, and Tehreema for offering me advice, and supporting me throughout this entire process. \\
+Heartfelt thanks to my fellow lab mates and friends, from past and present, Erin, Garima, Geoffry, Jake, Jacob, Moritz, Rohan and Vaibhav for the thought-provoking discussions, and for all the fun we have had in the last three years. In particular, I am grateful to Dr. Nicolo Canever, whose assistance was a milestone in the completion of this dissertation. Their presence was very important as they are the ones with whom I have shared moments of deep anxiety but also of big excitement. Special thanks to my friends from New Zealand: Abhi, Parth, Sreelakshmi, and Tehreema for offering me advice, and supporting me throughout this entire process. \\
 The final words in acknowledgment are usually reserved for those dearest to the author. I do not wish to break this tradition. A warm word for my colleague and great friend Fraser, whose words never failed to lift my spirits amid my discouragement. I would like to pay my special regards to Dr. Poulomi Roy for guiding me towards the right path, the same way she did during my Master's thesis. She taught me so much, but also went beyond that to show her love and care. 
 
 Some special words of gratitude go to my friends who have always had my back when things would get a bit disheartening: Arti, Baibhaw, Harsh, and Saket. Thank you for always being there for me. I deeply thank Megha and Payal, my best friends for the past 20 years, who have loved, entertained, and encouraged me to get through this period in the most positive way.
@@ -215,9 +218,9 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 % Uncomment the lines as you write the chapters
 %\include{Chapters/aimnstruc}
 %\include{Chapters/papncon}
-%\include{Chapters/chap1} 
-\include{Chapters/chap3} 
-\include{Chapters/chap2}
+\include{Chapters/chap1} 
+%\include{Chapters/chap3} 
+%\include{Chapters/chap2}
 %\include{Chapters/chap4} 
 %\include{Chapters/chap5} 
 %\include{Chapters/BOhBN}
@@ -232,8 +235,14 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{Appendices/appA}
+%\include{Appendices/appA}
 
+%----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
-\printbibliography
-\end{document}
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
