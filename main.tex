@@ -29,6 +29,7 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage[version=4]{mhchem}
+\usepackage{pdfpages}
 \usepackage{threeparttable}
 \usepackage{hyperref}
 \usepackage{mathpazo}
@@ -150,8 +151,8 @@ consistentlayout, % Uncomment to change the layout of the declaration, abstract 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 Lithium-ion batteries (LIBs) are a popular battery-choice for most applications. However, future battery demand will place increasing pressure on lithium and cobalt reserves and supply lines in the medium and long term. Moreover, the electrolyte used in LIBs is flammable, which is a safety issue that has to be managed. Any mechanical damage to the cell might result in short circuits or thermal runaway reactions, sometimes leading to an explosion.\\
-High abundance and easy accessibility of aluminium resources enable aluminium-ion batteries (AIBs), offer the opportunity to become an ideal alternative. Since a multivalent ion insertion is feasible, higher energy densities can be achieved. Non-aqueous AIBs use a non-flammable ionic liquid as their electrolyte, making them safer than LIBs in this regard. The most common electrolyte for AIBs is currently the ionic liquid 1-ethyl-3-methyl imidazolium chloride ([EMIm]Cl) mixed with aluminium trichloride (\ce{AlCl3}) where a chloroaluminate ion (Al$_x$Cl$_y$) is the active charge-carrying species.\\
-This dissertation focuses on discovering new cathode materials for non-aqueous AIBs. The author aimed to achieve an AIB with a superior performance over those previously reported. Two-dimensional (2D) layered materials showed potential as active cathode materials since they display similar properties as graphite, which is a popular choice for AIBs. Transition metal dichalcogenides-- bulk and nanostructured molybdenum disulfide (\ce{MoS2}), molybdenum diselenide (\ce{MoSe2}), and molybdenum sulfide selenide (MoSSe), carbon-based materials-- activated carbon from human hair, hemp fibres, mixture of fullerenes, and conductive carbon, and a few other materials such as tin oxide (\ce{SnO2}), molybdenum trioxide (\ce{MoO3}), graphitic-carbon nitride (g-\ce{C3N4}), and various combinations of metal oxides and, group 13 and 14 nitrides were tested as cathodes. Results showed that some of the materials displayed high stability and long cycle life and outperformed cathodes existing in current AIB literature. Cathodes made of molybdenum dichalcogenides and carbon-based materials were thoroughly investigated. Techniques such as \textit{ex-situ} x-ray diffraction, x-ray photoelectron spectroscopy and Raman spectroscopy were used to determine the underlying mechanism. h-BN/\ce{B2O3} was patented and is currently under the process of commercialisation.
+High abundance and easy accessibility of aluminium resources enable aluminium-ion batteries (AIBs), offer the opportunity to become an ideal alternative. Since a multivalent ion insertion is feasible, higher energy densities can be achieved. Non-aqueous AIBs use a non-flammable ionic liquid as their electrolyte, making them safer than LIBs in this regard. The most common electrolyte for AIBs is currently the ionic liquid 1-ethyl-3-methylimidazolium chloride ([EMIm]Cl) mixed with aluminium trichloride (\ce{AlCl3}) where a chloroaluminate ion (Al$_x$Cl$_y$) is the active charge-carrying species.\\
+This dissertation focuses on discovering new cathode materials for non-aqueous AIBs. The author aimed to achieve an AIB with a superior performance over those previously reported. Two-dimensional (2D) layered materials showed potential as active cathode materials since they display similar properties as graphite, which is a popular choice for AIBs. Transition metal dichalcogenides-- bulk and nanostructured molybdenum disulfide (\ce{MoS2}), molybdenum diselenide (\ce{MoSe2}), and molybdenum sulfide selenide (MoSSe), carbon-based materials-- activated carbon from human hair, hemp fibres, mixture of fullerenes, and conductive carbon, and a few other materials such as tin oxide (\ce{SnO2}), molybdenum trioxide (\ce{MoO3}), graphitic-carbon nitride (g-\ce{C3N4}), and various combinations of metal oxides and, group 13 and 14 nitrides were tested as cathodes. Results showed that some of the materials displayed high stability and long cycle life and outperformed cathodes existing in current AIB literature. Cathodes made of molybdenum dichalcogenides and carbon-based materials were thoroughly investigated. Techniques such as \textit{ex-situ} X-ray diffraction, X-ray photoelectron spectroscopy and Raman spectroscopy were used to determine the underlying mechanism. Hexagonal boron nitride/ boric anhydride (h-BN/\ce{B2O3}) composite as a cathode was patented and is currently under the process of commercialisation.
 \end{abstract}
 %	ACKNOWLEDGEMENTS
 \begin{acknowledgements}
@@ -210,17 +211,18 @@ The last word goes for Sangeeta, my mother, for always showing how proud she is 
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
-%\include{Chapters/aimnstruc}
-%\include{Chapters/papncon}
+\include{Chapters/aimnstruc}
+\include{Chapters/papncon}
 \include{Chapters/chap1} 
-%\include{Chapters/chap3} 
-%\include{Chapters/chap2}
-%\include{Chapters/chap4} 
-%\include{Chapters/chap5} 
-%\include{Chapters/BOhBN}
-%\include{Chapters/chap6}
-%\include{Chapters/chap7}
-%\include{Chapters/chap9}
+\include{Chapters/chap3} 
+\include{Chapters/chap2}
+\include{Chapters/chap4} 
+\include{Chapters/chap5} 
+\include{Chapters/BOhBN}
+\include{Chapters/chap6}
+\include{Chapters/chap7}
+\include{Chapters/chap9}
+\include{Chapters/Patent}
 
 %	THESIS CONTENT - APPENDICES
 
